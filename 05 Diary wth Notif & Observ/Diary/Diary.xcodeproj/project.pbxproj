@@ -17,6 +17,7 @@
 		2506154120C031A90075C686 /* AddInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2506153D20C031A90075C686 /* AddInfoViewController.swift */; };
 		2506154320C031B00075C686 /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2506154220C031AF0075C686 /* ItemModel.swift */; };
 		2506154820C051F20075C686 /* PassBackEditedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2506154720C051F20075C686 /* PassBackEditedData.swift */; };
+		259A6F1E20C52658009BB7F9 /* DateConvertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259A6F1D20C52658009BB7F9 /* DateConvertHelper.swift */; };
 		25E01E6620C14A7A0011F532 /* AddItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E01E6520C14A7A0011F532 /* AddItem.swift */; };
 		25E01E6820C14BBD0011F532 /* EditingDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E01E6720C14BBD0011F532 /* EditingDetails.swift */; };
 		25E01E6A20C14E3A0011F532 /* ImageDeleted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E01E6920C14E3A0011F532 /* ImageDeleted.swift */; };
@@ -36,6 +37,7 @@
 		2506153D20C031A90075C686 /* AddInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddInfoViewController.swift; sourceTree = "<group>"; };
 		2506154220C031AF0075C686 /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
 		2506154720C051F20075C686 /* PassBackEditedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassBackEditedData.swift; sourceTree = "<group>"; };
+		259A6F1D20C52658009BB7F9 /* DateConvertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateConvertHelper.swift; sourceTree = "<group>"; };
 		25E01E6520C14A7A0011F532 /* AddItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItem.swift; sourceTree = "<group>"; };
 		25E01E6720C14BBD0011F532 /* EditingDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditingDetails.swift; sourceTree = "<group>"; };
 		25E01E6920C14E3A0011F532 /* ImageDeleted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDeleted.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				2506154920C052470075C686 /* Protocols */,
 				2506154420C032330075C686 /* Controllers */,
 				2506154520C032560075C686 /* Model */,
+				259A6F1F20C526A6009BB7F9 /* Helpers */,
 				2506154620C032600075C686 /* Views */,
 				2506152920C02D5F0075C686 /* Assets.xcassets */,
 				2506152B20C02D5F0075C686 /* LaunchScreen.storyboard */,
@@ -121,6 +124,14 @@
 				25E01E6520C14A7A0011F532 /* AddItem.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		259A6F1F20C526A6009BB7F9 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				259A6F1D20C52658009BB7F9 /* DateConvertHelper.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		25E01E6B20C14FCD0011F532 /* DetaisVCExtensions */ = {
@@ -209,6 +220,7 @@
 				2506153920C030EA0075C686 /* ItemCell.swift in Sources */,
 				2506152320C02D5F0075C686 /* AppDelegate.swift in Sources */,
 				25E01E6A20C14E3A0011F532 /* ImageDeleted.swift in Sources */,
+				259A6F1E20C52658009BB7F9 /* DateConvertHelper.swift in Sources */,
 				2506154020C031A90075C686 /* MainTableViewController.swift in Sources */,
 				2506154820C051F20075C686 /* PassBackEditedData.swift in Sources */,
 				2506154120C031A90075C686 /* AddInfoViewController.swift in Sources */,

@@ -59,7 +59,7 @@ extension DetailsViewController {
             self.textDetailsLabel.text = self.cell?.text
             
             let editNotificationName = Notification.Name(editingNotificationKey)
-            NotificationCenter.default.post(name: editNotificationName, object: nil, userInfo: ["editedItem": self.cell])
+            NotificationCenter.default.post(name: editNotificationName, object: nil)
             
             //self.delegate?.editedItemPassed(title: self.cell?.title ?? "", tags: self.cell?.tags ?? "", text: self.cell?.text ?? "")
             self.editingModeEnded()
