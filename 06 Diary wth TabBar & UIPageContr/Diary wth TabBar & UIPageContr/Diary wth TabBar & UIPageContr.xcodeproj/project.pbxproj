@@ -81,7 +81,6 @@
 				259A6F2C20C5280B009BB7F9 /* AppDelegate.swift */,
 				259A6F5420C52A35009BB7F9 /* Protocols */,
 				259A6F5820C52AC0009BB7F9 /* Controllers */,
-				2539183D20C53F7D00E909FD /* FeaturedViewController.swift */,
 				259A6F5A20C52AED009BB7F9 /* Models */,
 				259A6F5520C52A3E009BB7F9 /* Helpers */,
 				259A6F5B20C52AFB009BB7F9 /* Views */,
@@ -117,6 +116,7 @@
 				259A6F5620C52AB1009BB7F9 /* AddInfoViewController.swift */,
 				259A6F4620C52A12009BB7F9 /* DetailsViewController.swift */,
 				259A6F5920C52AD2009BB7F9 /* DetailVC extensions */,
+				2539183D20C53F7D00E909FD /* FeaturedViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";

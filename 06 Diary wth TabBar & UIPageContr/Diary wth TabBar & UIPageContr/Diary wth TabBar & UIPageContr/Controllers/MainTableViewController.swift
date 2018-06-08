@@ -22,7 +22,6 @@ class MainTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         createObservers()
-        
     }
 
     // MARK: - Table view data source
