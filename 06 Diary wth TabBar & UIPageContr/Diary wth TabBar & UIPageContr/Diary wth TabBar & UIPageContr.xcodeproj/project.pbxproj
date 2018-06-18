@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2539183E20C53F7D00E909FD /* FeaturedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2539183D20C53F7D00E909FD /* FeaturedViewController.swift */; };
 		25752DDE20C6BCA700023EB0 /* FeaturedItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25752DDD20C6BCA700023EB0 /* FeaturedItems.swift */; };
+		2578DBA520D7F25900FE9CA0 /* InfoPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2578DBA420D7F25900FE9CA0 /* InfoPageViewController.swift */; };
 		259A6F2D20C5280B009BB7F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259A6F2C20C5280B009BB7F9 /* AppDelegate.swift */; };
 		259A6F3220C5280B009BB7F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 259A6F3020C5280B009BB7F9 /* Main.storyboard */; };
 		259A6F3420C5280B009BB7F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 259A6F3320C5280B009BB7F9 /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		2539183D20C53F7D00E909FD /* FeaturedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedViewController.swift; sourceTree = "<group>"; };
 		25752DDD20C6BCA700023EB0 /* FeaturedItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedItems.swift; sourceTree = "<group>"; };
+		2578DBA420D7F25900FE9CA0 /* InfoPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPageViewController.swift; sourceTree = "<group>"; };
 		259A6F2920C5280B009BB7F9 /* Diary wth TabBar & UIPageContr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Diary wth TabBar & UIPageContr.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		259A6F2C20C5280B009BB7F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		259A6F3120C5280B009BB7F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				259A6F4620C52A12009BB7F9 /* DetailsViewController.swift */,
 				259A6F5920C52AD2009BB7F9 /* DetailVC extensions */,
 				2539183D20C53F7D00E909FD /* FeaturedViewController.swift */,
+				2578DBA420D7F25900FE9CA0 /* InfoPageViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 				259A6F5D20C52C8F009BB7F9 /* NotificationKeys.swift in Sources */,
 				259A6F4920C52A12009BB7F9 /* PassBackEditedData.swift in Sources */,
 				259A6F4F20C52A12009BB7F9 /* DetailsViewController.swift in Sources */,
+				2578DBA520D7F25900FE9CA0 /* InfoPageViewController.swift in Sources */,
 				259A6F5320C52A1B009BB7F9 /* EditingDetails.swift in Sources */,
 				259A6F2D20C5280B009BB7F9 /* AppDelegate.swift in Sources */,
 				259A6F4720C52A12009BB7F9 /* DateConvertHelper.swift in Sources */,

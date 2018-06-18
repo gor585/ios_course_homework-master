@@ -41,7 +41,6 @@ class FeaturedViewController: UIViewController, UITableViewDelegate, UITableView
         topFeaturedLabel.bottomAnchor.constraint(equalTo: tableView.topAnchor).isActive = true
         
         self.view.addConstraint(NSLayoutConstraint(item: topFeaturedLabel, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1.0, constant: tableView.frame.height / 9))
-        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -59,5 +58,9 @@ class FeaturedViewController: UIViewController, UITableViewDelegate, UITableView
         cell.inputTextLabel.text = newItemsArray[indexPath.row].text
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
     }
 }
