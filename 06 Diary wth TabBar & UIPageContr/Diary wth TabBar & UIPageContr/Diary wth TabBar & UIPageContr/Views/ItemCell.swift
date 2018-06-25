@@ -9,10 +9,8 @@ import Foundation
 import UIKit
 
 class ItemCell: UITableViewCell {
-    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var tagLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var inputTextLabel: UILabel!
-    
 }

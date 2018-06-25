@@ -28,15 +28,6 @@ class InfoPageViewController: UIPageViewController, UIPageViewControllerDelegate
         return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: vcIdentifier)
     }
     
-    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        guard let vcIndex = vcOrder.index(of: viewController) else { return nil }
-        let previousIndex = vcIndex - 1
-        guard previousIndex >= 0 else { return vcOrder.last }
-        guard vcOrder.count > previousIndex else { return nil }
-        
-        return vcOrder[previousIndex]
-    }
-    
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         guard let vcIndex = vcOrder.index(of: viewController) else { return nil }
         let nextIndex = vcIndex + 1
@@ -46,4 +37,12 @@ class InfoPageViewController: UIPageViewController, UIPageViewControllerDelegate
         return vcOrder[nextIndex]
     }
     
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+        guard let vcIndex = vcOrder.index(of: viewController) else { return nil }
+        let previousIndex = vcIndex - 1
+        guard previousIndex >= 0 else { return vcOrder.last }
+        guard vcOrder.count > previousIndex else { return nil }
+        
+        return vcOrder[previousIndex]
+    }
 }
