@@ -10,6 +10,8 @@
 		2553D12720E3A784003CCF8E /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2553D12620E3A784003CCF8E /* ItemCell.swift */; };
 		25C2076B20E3D17E00FCA58C /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C2076A20E3D17E00FCA58C /* Notifications.swift */; };
 		25C2076D20E3D22600FCA58C /* Segues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C2076C20E3D22600FCA58C /* Segues.swift */; };
+		25CB06C620E3EAB2001DD60C /* FeaturedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CB06C520E3EAB2001DD60C /* FeaturedButton.swift */; };
+		25CB06C820E3EB1F001DD60C /* CollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CB06C720E3EB1F001DD60C /* CollectionLayout.swift */; };
 		25D0E7CF20E104EF00F8804F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25D0E7CD20E104EF00F8804F /* Main.storyboard */; };
 		25D0E7D120E104EF00F8804F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25D0E7D020E104EF00F8804F /* Assets.xcassets */; };
 		25D0E7D420E104EF00F8804F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25D0E7D220E104EF00F8804F /* LaunchScreen.storyboard */; };
@@ -36,6 +38,8 @@
 		2553D12620E3A784003CCF8E /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		25C2076A20E3D17E00FCA58C /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		25C2076C20E3D22600FCA58C /* Segues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Segues.swift; sourceTree = "<group>"; };
+		25CB06C520E3EAB2001DD60C /* FeaturedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedButton.swift; sourceTree = "<group>"; };
+		25CB06C720E3EB1F001DD60C /* CollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionLayout.swift; sourceTree = "<group>"; };
 		25D0E7C620E104EF00F8804F /* 07 Diary wth CollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "07 Diary wth CollectionView.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		25D0E7CE20E104EF00F8804F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		25D0E7D020E104EF00F8804F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -76,6 +80,8 @@
 			children = (
 				25C2076A20E3D17E00FCA58C /* Notifications.swift */,
 				25C2076C20E3D22600FCA58C /* Segues.swift */,
+				25CB06C520E3EAB2001DD60C /* FeaturedButton.swift */,
+				25CB06C720E3EB1F001DD60C /* CollectionLayout.swift */,
 			);
 			path = "MainVC Ext";
 			sourceTree = "<group>";
@@ -251,6 +257,7 @@
 				25D0E81720E1075D00F8804F /* FeaturedItems.swift in Sources */,
 				2553D12720E3A784003CCF8E /* ItemCell.swift in Sources */,
 				25D0E80C20E106F100F8804F /* PassBackEditedData.swift in Sources */,
+				25CB06C820E3EB1F001DD60C /* CollectionLayout.swift in Sources */,
 				25D0E80B20E106F100F8804F /* AddItem.swift in Sources */,
 				25D0E80120E1068900F8804F /* EditingDetails.swift in Sources */,
 				25C2076D20E3D22600FCA58C /* Segues.swift in Sources */,
@@ -264,6 +271,7 @@
 				25D0E7EE20E1062500F8804F /* NotificationKeys.swift in Sources */,
 				25D0E7FC20E1067F00F8804F /* DetailsViewController.swift in Sources */,
 				25D0E7FE20E1067F00F8804F /* InfoPageViewController.swift in Sources */,
+				25CB06C620E3EAB2001DD60C /* FeaturedButton.swift in Sources */,
 				25D0E80220E1068900F8804F /* ImageDeleted.swift in Sources */,
 				25D0E81320E1072500F8804F /* CollectionCell.swift in Sources */,
 			);

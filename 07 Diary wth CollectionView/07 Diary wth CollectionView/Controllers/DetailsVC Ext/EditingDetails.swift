@@ -13,8 +13,7 @@ extension DetailsViewController {
     
     func editingModeBegin() {
         titleDetailsLabel.isHidden = true
-        tagDetailsLabel.isHidden = true
-        dateDetaislLabel.isHidden = true
+        photoDetailsImage.isHidden = true
         textDetailsLabel.isHidden = true
         editButton.isEnabled = false
         editButton.isHidden = true
@@ -22,16 +21,17 @@ extension DetailsViewController {
         deleteButton.isHidden = true
         
         titleEditingView.isHidden = false
-        tagEditingView.isHidden = false
+        photoEditingImage.isHidden = false
         textEditingView.isHidden = false
+        changeImgEditButton.isHidden = false
+        changeImgEditButton.isEnabled = true
         confirmButton.isHidden = false
         confirmButton.isEnabled = true
     }
     
     func editingModeEnded() {
         titleDetailsLabel.isHidden = false
-        tagDetailsLabel.isHidden = false
-        dateDetaislLabel.isHidden = false
+        photoDetailsImage.isHidden = false
         textDetailsLabel.isHidden = false
         editButton.isEnabled = true
         editButton.isHidden = false
@@ -39,8 +39,10 @@ extension DetailsViewController {
         deleteButton.isHidden = false
         
         titleEditingView.isHidden = true
-        tagEditingView.isHidden = true
+        photoEditingImage.isHidden = true
         textEditingView.isHidden = true
+        changeImgEditButton.isHidden = true
+        changeImgEditButton.isEnabled = false
         confirmButton.isHidden = true
         confirmButton.isEnabled = false
     }
@@ -51,11 +53,9 @@ extension DetailsViewController {
         let actionConfirm = UIAlertAction(title: "Confirm", style: .destructive) { (actionDelete) in
             
             self.cell?.title = self.titleEditingView.text
-            self.cell?.tags = self.tagEditingView.text
             self.cell?.text = self.textEditingView.text
             
             self.titleDetailsLabel.text = self.cell?.title
-            self.tagDetailsLabel.text = self.cell?.tags
             self.textDetailsLabel.text = self.cell?.text
             
             let editNotificationName = Notification.Name(editingNotificationKey)

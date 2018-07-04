@@ -12,13 +12,11 @@ class Item {
     let currentDate = Date()
     var date = ""
     var title: String?
-    var tags: String?
     var text: String?
     var featured: Bool
     
-    init(title: String? = "", tags: String? = "", text: String? = "") {
+    init(title: String? = "", text: String? = "") {
         self.title = title
-        self.tags = tags
         self.text = text
         self.featured = false
         

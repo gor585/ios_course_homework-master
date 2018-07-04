@@ -15,6 +15,8 @@ extension MainViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(MainViewController.reloadItemArrayData(notification:)), name: editNotificationName, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(MainViewController.switchTableToGrid(notification:)), name: switchTableToCollectionNotificationName, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(MainViewController.switchGridToTable(notification:)), name: switchCollectionToTableNotificationName, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(MainViewController.switchColorThemeToBlack(notification:)), name: switchColorThemeToBlackNotificationName, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(MainViewController.switchColorThemeToWhite(notification:)), name: switchColorThemeToWhiteNotificationName, object: nil)
     }
     
     @objc func reloadItemArrayData(notification: NSNotification) {
@@ -27,5 +29,13 @@ extension MainViewController {
     
     @objc func switchGridToTable(notification: NSNotification) {
         collectionViewTableLayout()
+    }
+    
+    @objc func switchColorThemeToBlack(notification: NSNotification) {
+        whiteColorTheme = false
+    }
+    
+    @objc func switchColorThemeToWhite(notification: NSNotification) {
+        whiteColorTheme = true
     }
 }

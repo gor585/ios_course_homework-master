@@ -53,7 +53,6 @@ class FeaturedViewController: UIViewController, UITableViewDelegate, UITableView
         newItemsArray.sort { $0.date > $1.date }
         
         cell.titleLabel.text = newItemsArray[indexPath.row].title!
-        cell.tagLabel.text = newItemsArray[indexPath.row].tags!
         cell.dateLabel.text = newItemsArray[indexPath.row].date
         cell.inputTextLabel.text = newItemsArray[indexPath.row].text
         

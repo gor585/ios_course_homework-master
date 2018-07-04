@@ -12,16 +12,17 @@ class DetailsViewController: UIViewController {
     var delegate: PassBackEditedData?
     
     @IBOutlet weak var titleDetailsLabel: UILabel!
-    @IBOutlet weak var tagDetailsLabel: UILabel!
     @IBOutlet weak var dateDetaislLabel: UILabel!
     @IBOutlet weak var textDetailsLabel: UITextView!
     @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var deleteButton: UIButton!
+    @IBOutlet weak var photoDetailsImage: UIImageView!
     
     @IBOutlet weak var titleEditingView: UITextView!
-    @IBOutlet weak var tagEditingView: UITextView!
     @IBOutlet weak var textEditingView: UITextView!
     @IBOutlet weak var confirmButton: UIButton!
+    @IBOutlet weak var photoEditingImage: UIImageView!
+    @IBOutlet weak var changeImgEditButton: UIButton!
     
     var cell: Item?
     var selectedRow: Int?
@@ -30,17 +31,31 @@ class DetailsViewController: UIViewController {
         super.viewDidLoad()
         
         titleDetailsLabel.text = cell?.title
-        tagDetailsLabel.text = cell?.tags
         dateDetaislLabel.text = cell?.date
         textDetailsLabel.text = cell?.text
         
         titleEditingView.text = cell?.title
-        tagEditingView.text = cell?.tags
         textEditingView.text = cell?.text
+        
+        deleteButton.layer.borderWidth = 0.2
+        deleteButton.layer.borderColor = UIColor.black.cgColor
+        
+        confirmButton.layer.borderWidth = 0.2
+        confirmButton.layer.borderColor = UIColor.black.cgColor
+        
+        editButton.layer.borderWidth = 0.2
+        editButton.layer.borderColor = UIColor.black.cgColor
+        
+        changeImgEditButton.layer.borderWidth = 0.8
+        changeImgEditButton.layer.borderColor = UIColor.gray.cgColor
     }
     
     @IBAction func editButtonPressed(_ sender: Any) {
         editingModeBegin()
+    }
+    
+    @IBAction func changeImgEditBtnPressed(_ sender: Any) {
+        
     }
     
     @IBAction func deleteButtonPressed(_ sender: Any) {

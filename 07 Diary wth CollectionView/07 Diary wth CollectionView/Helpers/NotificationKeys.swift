@@ -11,3 +11,5 @@ import Foundation
 let editingNotificationKey = "item.edited"
 let switchTableToCollectionKey = "table.switched.to.collection"
 let switchCollectionToTableKey = "collection.switched.to.table"
+let switchColorThemeToBlackKey = "color.theme.changed.to.black"
+let switchColorThemeToWhiteKey = "color.theme.changed.to.white"

@@ -17,6 +17,10 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     let editNotificationName = Notification.Name(rawValue: editingNotificationKey)
     let switchTableToCollectionNotificationName = Notification.Name(switchTableToCollectionKey)
     let switchCollectionToTableNotificationName = Notification.Name(switchCollectionToTableKey)
+    let switchColorThemeToBlackNotificationName = Notification.Name(switchColorThemeToBlackKey)
+    let switchColorThemeToWhiteNotificationName = Notification.Name(switchColorThemeToWhiteKey)
+    
+    var whiteColorTheme: Bool = true
     
     deinit {
         NotificationCenter.default.removeObserver(self)
@@ -31,6 +35,14 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
         collectionViewTableLayout()
         
         collectionView.allowsSelection = true
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if whiteColorTheme == false {
+            collectionView.backgroundColor = UIColor.black
+        } else {
+            collectionView.backgroundColor = UIColor.white
+        }
     }
     
     
@@ -54,40 +66,13 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         return cell
     }
-    
-    @objc func featuredButtonPressed(_ sender: UIButton) {
-        let cell = sender.superview?.superview as! CollectionCell
-        let indexOfCell = collectionView.indexPath(for: cell)
-        if itemsArray[(indexOfCell?.row)!].featured == false {
-            itemsArray[(indexOfCell?.row)!].featured = true
-            sender.backgroundColor = UIColor.yellow
-        } else {
-            itemsArray[(indexOfCell?.row)!].featured = false
-            sender.backgroundColor = UIColor.lightGray
-        }
-        
-        appendFeaturedItemsArray()
-    }
-    
-    @objc func collectionViewGridLayout() {
-        let width = (view.frame.size.width - 30) / 2
-        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        layout.itemSize = CGSize(width: width, height: width)
-    }
-    
-    @objc func collectionViewTableLayout() {
-        let width = view.frame.size.width - 30
-        let height = view.frame.size.height / 5
-        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        layout.itemSize = CGSize(width: width, height: height)
-    }
 }
 
 //MARK: - Extensions
 
 extension MainViewController: AddItem {
-    func userCreatedNewItem(title: String, tags: String, text: String) {
-        let newItem = Item(title: title, tags: tags, text: text)
+    func userCreatedNewItem(title: String, text: String) {
+        let newItem = Item(title: title, text: text)
         itemsArray.append(newItem)
         collectionView.reloadData()
     }

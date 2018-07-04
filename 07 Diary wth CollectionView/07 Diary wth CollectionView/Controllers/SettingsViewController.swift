@@ -8,24 +8,14 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
-    @IBOutlet weak var tableView: UITableView!
+class SettingsViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.delegate = self
-        tableView.dataSource = self
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "settingsCell") else { return UITableViewCell() }
-        
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
     }
     
     @IBAction func switchViewsPressed(_ sender: UISwitch) {
@@ -38,5 +28,14 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
    
-
+    @IBAction func switchColorTheme(_ sender: UISwitch) {
+        if (sender.isOn == false) {
+            let switchColorThemeToBlackNotificationName = Notification.Name(switchColorThemeToBlackKey)
+            NotificationCenter.default.post(name: switchColorThemeToBlackNotificationName, object: nil)
+        } else {
+            let switchColorThemeToWhiteNotificationName = Notification.Name(switchColorThemeToWhiteKey)
+            NotificationCenter.default.post(name: switchColorThemeToWhiteNotificationName, object: nil)
+        }
+    }
+    
 }

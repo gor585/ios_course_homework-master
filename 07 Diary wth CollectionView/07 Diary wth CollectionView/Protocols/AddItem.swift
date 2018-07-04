@@ -10,5 +10,5 @@ import Foundation
 import UIKit
 
 protocol AddItem {
-    func userCreatedNewItem(title: String, tags: String, text: String)
+    func userCreatedNewItem(title: String, text: String)
 }

@@ -13,7 +13,9 @@ extension DetailsViewController {
     
     func addDeletedImage() {
         titleDetailsLabel.text = "Record deleted"
-        tagDetailsLabel.text = ""
+        titleDetailsLabel.translatesAutoresizingMaskIntoConstraints = false
+        titleDetailsLabel.frame.size.height = view.frame.size.height / 6
+        
         textDetailsLabel.text = ""
         
         editButton.isEnabled = false
@@ -21,7 +23,6 @@ extension DetailsViewController {
         deleteButton.isEnabled = false
         deleteButton.isHidden = true
         dateDetaislLabel.isHidden = true
-        tagDetailsLabel.isHidden = true
         textDetailsLabel.isHidden = true
         
         view.backgroundColor = UIColor.gray
@@ -38,5 +39,10 @@ extension DetailsViewController {
             NSLayoutConstraint(item: deleteImageView, attribute: .centerX, relatedBy: .equal, toItem: self.view, attribute: .centerX, multiplier: 1.0, constant: 0),
             NSLayoutConstraint(item: deleteImageView, attribute: .centerY, relatedBy: .equal, toItem: self.view, attribute: .centerY, multiplier: 1.0, constant: 0)
             ])
+        
+        UIView.animate(withDuration: 0.9, delay: 0.0, usingSpringWithDamping: 0.1, initialSpringVelocity: 0.0, options: [.beginFromCurrentState], animations: {
+            deleteImageView.bounds.size.height = self.view.bounds.height * 0.1
+            deleteImageView.bounds.size.width = self.view.bounds.width * 0.2
+        }, completion: nil)
     }
 }
