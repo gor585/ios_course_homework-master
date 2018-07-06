@@ -13,10 +13,12 @@ class Item {
     var date = ""
     var title: String?
     var text: String?
+    var image: UIImage?
     var featured: Bool
     
-    init(title: String? = "", text: String? = "") {
+    init(title: String? = "", image: UIImage? = UIImage(named: "photo-icon"), text: String? = "") {
         self.title = title
+        self.image = image
         self.text = text
         self.featured = false
         

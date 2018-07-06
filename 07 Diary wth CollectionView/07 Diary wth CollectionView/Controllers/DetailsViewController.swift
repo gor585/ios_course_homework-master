@@ -11,6 +11,8 @@ class DetailsViewController: UIViewController {
     
     var delegate: PassBackEditedData?
     
+    var whiteColorTheme: Bool = true
+    
     @IBOutlet weak var titleDetailsLabel: UILabel!
     @IBOutlet weak var dateDetaislLabel: UILabel!
     @IBOutlet weak var textDetailsLabel: UITextView!
@@ -33,9 +35,11 @@ class DetailsViewController: UIViewController {
         titleDetailsLabel.text = cell?.title
         dateDetaislLabel.text = cell?.date
         textDetailsLabel.text = cell?.text
+        photoDetailsImage.image = cell?.image
         
         titleEditingView.text = cell?.title
         textEditingView.text = cell?.text
+        photoEditingImage.image = cell?.image
         
         deleteButton.layer.borderWidth = 0.2
         deleteButton.layer.borderColor = UIColor.black.cgColor
@@ -46,8 +50,16 @@ class DetailsViewController: UIViewController {
         editButton.layer.borderWidth = 0.2
         editButton.layer.borderColor = UIColor.black.cgColor
         
-        changeImgEditButton.layer.borderWidth = 0.8
-        changeImgEditButton.layer.borderColor = UIColor.gray.cgColor
+        changeImgEditButton.layer.borderWidth = 1
+        changeImgEditButton.layer.borderColor = UIColor.white.cgColor
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if whiteColorTheme == false {
+            self.view.backgroundColor = UIColor.black
+        } else {
+            self.view.backgroundColor = UIColor.white
+        }
     }
     
     @IBAction func editButtonPressed(_ sender: Any) {
@@ -55,7 +67,7 @@ class DetailsViewController: UIViewController {
     }
     
     @IBAction func changeImgEditBtnPressed(_ sender: Any) {
-        
+        chooseImage()
     }
     
     @IBAction func deleteButtonPressed(_ sender: Any) {

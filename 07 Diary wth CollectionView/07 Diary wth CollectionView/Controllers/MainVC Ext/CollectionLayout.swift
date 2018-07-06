@@ -24,4 +24,13 @@ extension MainViewController {
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         layout.itemSize = CGSize(width: width, height: height)
     }
+    
+    func applyChosenLayout() {
+        let layoutToGrid: Bool = defaults.bool(forKey: "switchCollectionLayout")
+        if layoutToGrid == false {
+            collectionViewGridLayout()
+        } else {
+            collectionViewTableLayout()
+        }
+    }
 }

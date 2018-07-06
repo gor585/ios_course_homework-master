@@ -14,6 +14,7 @@ extension MainViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "addInfo" {
             let secondVC = segue.destination as! AddInfoViewController
+            secondVC.whiteColorTheme = whiteColorTheme
             secondVC.delegate = self
         }
         
@@ -23,6 +24,7 @@ extension MainViewController {
             let indexPath = collectionView.indexPath(for: selectedItem)
             thirdVC.cell = itemsArray[(indexPath?.row)!]
             thirdVC.selectedRow = indexPath?.row
+            thirdVC.whiteColorTheme = whiteColorTheme
             thirdVC.delegate = self
         }
     }

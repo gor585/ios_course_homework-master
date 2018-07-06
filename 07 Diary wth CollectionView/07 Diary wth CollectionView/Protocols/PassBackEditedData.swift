@@ -6,7 +6,6 @@
 //  Copyright © 2018 Jaroslav Stupinskyi. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 protocol PassBackEditedData {

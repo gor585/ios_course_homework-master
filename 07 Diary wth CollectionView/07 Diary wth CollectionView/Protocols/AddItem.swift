@@ -6,9 +6,8 @@
 //  Copyright © 2018 Jaroslav Stupinskyi. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 protocol AddItem {
-    func userCreatedNewItem(title: String, text: String)
+    func userCreatedNewItem(title: String, image: UIImage, text: String)
 }

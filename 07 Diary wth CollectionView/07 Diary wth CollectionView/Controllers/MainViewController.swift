@@ -12,6 +12,10 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     var itemsArray = [Item]()
     
+    let defaults = UserDefaults.standard
+    
+    var whiteColorTheme: Bool = true
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     let editNotificationName = Notification.Name(rawValue: editingNotificationKey)
@@ -19,8 +23,6 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     let switchCollectionToTableNotificationName = Notification.Name(switchCollectionToTableKey)
     let switchColorThemeToBlackNotificationName = Notification.Name(switchColorThemeToBlackKey)
     let switchColorThemeToWhiteNotificationName = Notification.Name(switchColorThemeToWhiteKey)
-    
-    var whiteColorTheme: Bool = true
     
     deinit {
         NotificationCenter.default.removeObserver(self)
@@ -32,9 +34,9 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
         collectionView.delegate = self
         collectionView.dataSource = self
         
-        collectionViewTableLayout()
+        applyChosenLayout()
         
-        collectionView.allowsSelection = true
+        whiteColorTheme = defaults.bool(forKey: "switchColorTheme")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -60,6 +62,7 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
         cell.titleLabel.text = itemsArray[indexPath.item].title
         cell.dateLabel.text = itemsArray[indexPath.item].date
         cell.textLabel.text = itemsArray[indexPath.item].text
+        cell.photoContainer.image = itemsArray[indexPath.item].image
         
         cell.featuredButton.tag = indexPath.item
         cell.featuredButton.addTarget(self, action: #selector(featuredButtonPressed(_:)), for: .touchUpInside)
@@ -71,8 +74,8 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
 //MARK: - Extensions
 
 extension MainViewController: AddItem {
-    func userCreatedNewItem(title: String, text: String) {
-        let newItem = Item(title: title, text: text)
+    func userCreatedNewItem(title: String, image: UIImage, text: String) {
+        let newItem = Item(title: title, image: image, text: text)
         itemsArray.append(newItem)
         collectionView.reloadData()
     }

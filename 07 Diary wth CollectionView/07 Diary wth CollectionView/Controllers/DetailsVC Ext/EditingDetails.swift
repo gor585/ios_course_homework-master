@@ -6,7 +6,6 @@
 //  Copyright © 2018 Jaroslav Stupinskyi. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 extension DetailsViewController {
@@ -54,9 +53,11 @@ extension DetailsViewController {
             
             self.cell?.title = self.titleEditingView.text
             self.cell?.text = self.textEditingView.text
+            self.cell?.image = self.photoEditingImage.image
             
             self.titleDetailsLabel.text = self.cell?.title
             self.textDetailsLabel.text = self.cell?.text
+            self.photoDetailsImage.image = self.cell?.image
             
             let editNotificationName = Notification.Name(editingNotificationKey)
             NotificationCenter.default.post(name: editNotificationName, object: nil)

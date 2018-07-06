@@ -6,7 +6,6 @@
 //  Copyright © 2018 Jaroslav Stupinskyi. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 extension DetailsViewController {
@@ -24,6 +23,8 @@ extension DetailsViewController {
         deleteButton.isHidden = true
         dateDetaislLabel.isHidden = true
         textDetailsLabel.isHidden = true
+        photoDetailsImage.isHidden = true
+        photoEditingImage.isHidden = true
         
         view.backgroundColor = UIColor.gray
         
